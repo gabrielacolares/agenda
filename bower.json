@@ -1,0 +1,28 @@
+{
+  "name": "agenda",
+  "authors": [
+    "Gabriela <gabriela@cliws.com.br>"
+  ],
+  "description": "Agenda",
+  "main": "",
+  "keywords": [
+    "agenda"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.5",
+    "bootstrap": "boostrap#^3.3.7",
+    "grunt": "^1.0.1",
+    "jasmine-core": "jasmine#^2.7.0",
+    "karma": "^0.4.6"
+  }
+}
