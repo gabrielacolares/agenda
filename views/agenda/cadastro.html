@@ -3,7 +3,8 @@
          <div class="panel panel-primary">
             <div class="panel-heading">Cadastro</div>
               <div class="panel-body"> 
-               <form ng-app="app" name="formCadastro" novalidate>
+                  <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+               <form ng-app="app" name="formCadastro"  ng-controller="CadastroCtrl" novalidate ng-submit="submeter()">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input type="nome" class="form-control" id="nome" name= "nome" placeholder="nome"  ng-model="contato.nome" required>
@@ -38,7 +39,7 @@
                     <button type="submit" class="btn btn-primary pull-right" ng-disabled="formCadastro.nome.$pristine || formCadastro.nome.$dirty &&formCadastro.nome.$invalid || 
                          formCadastro.sobrenome.$pristine ||  formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid || 
                          formCadastro.telefone.$pristine || formCadastro.telefone.$dirty && formCadastro.telefone.$invalid ||
-                         formCadastro.apelido.$pristine || formCadastro.apelido.$dirty && formCadastro.apelido.$invalid" ng-submit="enviar(contato)">Adicionar</button>
+                         formCadastro.apelido.$pristine || formCadastro.apelido.$dirty && formCadastro.apelido.$invalid" >Adicionar</button>
     
                 </form>
               </div>
