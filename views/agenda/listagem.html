@@ -1,8 +1,10 @@
 <div class="row">
     <div class= "col-xs-12  col-sm-12 col-md-12 col-lg-12">   
+        
         <div class="panel panel-primary">
             <div class="panel-heading">Contatos</div>
                 <div class="panel-body"> 
+                     <input class="form-control padd" placeholder="filtrar pelo nome" ng-model="filtro" ng-model-options="{ debounce: 500 }">
                     <div class="table-responsive">
                         <table class="table table-striped">
                         <thead>
@@ -15,11 +17,9 @@
                         </tr>
                         </thead>
                             <tbody>
-                                <tr ng-repeat="contato in contatos">
+                                <tr ng-repeat="contato in contatos | filter: filtro">
                                     <td>{{ contato.nome }}</td>
-                               
                                     <td>{{ contato.email }}</td>
-                                
                              
                                     <td>{{ contato.apelido }}</td>
                            
