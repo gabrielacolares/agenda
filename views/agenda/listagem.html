@@ -1,1 +1,39 @@
-listagem
+<div class="row">
+    <div class= "col-xs-12  col-sm-12 col-md-12 col-lg-12">   
+        <div class="panel panel-primary">
+            <div class="panel-heading">Contatos</div>
+                <div class="panel-body"> 
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                        <thead>
+                        <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Apelido</th>
+                        <th>Email</th>
+                        <th>Ação</th>
+                        </tr>
+                        </thead>
+                            <tbody>
+                                <tr ng-repeat="contato in contatos">
+                                    <td>{{ contato.nome }}</td>
+                               
+                                    <td>{{ contato.email }}</td>
+                                
+                             
+                                    <td>{{ contato.apelido }}</td>
+                           
+                                    <td>{{ contato.email }}</td>
+
+                                    <td><a class="btn btn-primary  pull-right" href="">Editar</a>
+                                        <button class="btn btn-danger  pull-right" ng-click="remover(contato)">Remover</button>
+                                    </td>
+                            </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>  

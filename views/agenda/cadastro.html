@@ -1,3 +1,47 @@
-<div>
-cadastro
-<div>
+    <div class="row">
+      <div class= "col-xs-12  col-sm-12 col-md-12 col-lg-12">   
+         <div class="panel panel-primary">
+            <div class="panel-heading">Cadastro</div>
+              <div class="panel-body"> 
+               <form ng-app="app" name="formCadastro" novalidate>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="nome" class="form-control" id="nome" name= "nome" placeholder="nome"  ng-model="contato.nome" required>
+                        <span style="color:red" ng-show="formCadastro.nome.$dirty && formCadastro.nome.$invalid">
+                            <span >Preencha o Nome.</span></span>
+                     </div>
+  
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="sobrenome" class="form-control" id="sobrenome" name= "sobrenome" placeholder="sobrenome" ng-model="contato.sobrenome" required>
+                    </div>
+                      <span style="color:red" ng-show="formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid">
+                            <span >Preencha o Sobrenome.</span>
+                    </span>
+                     
+                     <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="telefone" class="form-control" id="telefone" name= "telefone" placeholder="telefone" ng-model="contato.telefone" required>
+                    </div>
+                      <span style="color:red" ng-show="formCadastro.telefone.$dirty && formCadastro.telefone.$invalid">
+                            <span >Preencha o Telefone.</span>
+                        </span>
+                            
+                    <div class="form-group">
+                        <label for="apelido">Apelido :</label>
+                        <input type="apelido" class="form-control" id="apelido"name= "apelido"  placeholder="apelido" ng-model="contato.apelido" required>
+                    </div>
+                      <span style="color:red" ng-show="formCadastro.apelido.$dirty && formCadastro.apelido.$invalid">
+                            <span >Preencha o Apelido.</span>
+                    </span>
+
+                    <button type="submit" class="btn btn-primary pull-right" ng-disabled="formCadastro.nome.$pristine || formCadastro.nome.$dirty &&formCadastro.nome.$invalid || 
+                         formCadastro.sobrenome.$pristine ||  formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid || 
+                         formCadastro.telefone.$pristine || formCadastro.telefone.$dirty && formCadastro.telefone.$invalid ||
+                         formCadastro.apelido.$pristine || formCadastro.apelido.$dirty && formCadastro.apelido.$invalid">Adicionar</button>
+    
+                </form>
+              </div>
+         </div> 
+      </div>
+  </div>  
