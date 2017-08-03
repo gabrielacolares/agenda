@@ -10,6 +10,7 @@ function($scope, $firebaseArray, $location, FBURL){
 			apelido: $scope.contato.apelido,
 			dataCadastro : new Date()
 		});
+
 		$location.path('/');
 	};
 	

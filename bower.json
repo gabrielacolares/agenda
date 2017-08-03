@@ -1,15 +1,15 @@
 {
   "name": "agenda",
-  "authors": [
-    "Gabriela <gabriela@cliws.com.br>"
-  ],
-  "description": "Sistema de Agenda",
+  "homepage": "https://github.com/gabrielacolares/agenda",
+  "description": "sistema de agenda",
   "main": "",
   "keywords": [
     "agenda"
   ],
+  "authors": [
+    "Gabriela Colares"
+  ],
   "license": "MIT",
-  "homepage": "https://github.com/gabrielacolares/agenda",
   "private": true,
   "ignore": [
     "**/.*",
@@ -19,6 +19,13 @@
     "tests"
   ],
   "dependencies": {
-    "angular-route": "^1.6.5"
+    "angular-route": "1.4.5",
+    "angular": "angularjs#1.4.5",
+    "bootstrap": "boostrap#^3.3.7",
+    "grunt": "^1.0.1",
+    "jasmine-core": "jasmine#^2.7.0",
+    "karma": "^0.4.6",
+    "firebase": "2.2.4",
+    "angularfire": "1.1.2"
   }
 }

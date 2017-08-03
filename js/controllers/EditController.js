@@ -1,7 +1,7 @@
 app.controller('EditController', ['$scope','$location', '$routeParams', '$firebaseObject', 'FBURL',   
     function($scope, $location, $routeParams, $firebaseObject, FBURL){
-
     var ref = new Firebase(FBURL + $routeParams.id);
+    $scope.mensagem = '';
     $scope.contato = $firebaseObject(ref);
 
     $scope.editContato = function() {
@@ -11,11 +11,10 @@ app.controller('EditController', ['$scope','$location', '$routeParams', '$fireba
 			telefone: $scope.contato.telefone,
 			apelido: $scope.contato.apelido,
 			dataCadastro : new Date()
-		});
-        $scope.edit_form.$setPristine();
+        }).then(function(data){
+    $scope.mensagem = "Salvo com sucesso!";
+    $scope.edit_form.$setPristine();
         $scope.contato = {};
-        $location.path('/list');
-
-    };
-
+       $location.path('/list');
+  })}
 }]);

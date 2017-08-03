@@ -2,6 +2,7 @@
     <div class="col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
     <div class="col-xs-12  col-sm-12 col-md-8 col-lg-8">
         <div class="table-responsive">
+            <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
             <input class="form-control padd" placeholder="Filtrar pelo nome" ng-model="filtro" ng-model-options="{ debounce: 500 }"></br>
             <table class="table table-striped table-hover">
                 <!-- <caption class="lead">Contatos</caption> -->
@@ -11,6 +12,7 @@
                         <th>Email</th>
                         <th>Apelido</th>
                         <th>Email</th>
+                        <th>Data</th>
                         <th>Ação</th>
                     </tr>
                 </thead>
@@ -20,6 +22,7 @@
                         <td>{{ contato.sobrenome }}</td>
                         <td>{{ contato.telefone }}</td>
                         <td>{{ contato.apelido }}</td>
+                        <td>{{ contato.dataCadastro }}</td>
                         <td class="pull-right"><a href="#/edit/{{contato.$id}}" class="btn btn-small btn-primary">Editar</a> <a class="btn btn-small btn-danger"
                                 ng-click="removeContato(contato.$id)">Delete</a>
                         </td>
@@ -27,4 +30,4 @@
                 <tbody>
             </table>
             <div class="col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
-        </div>
+</div>
