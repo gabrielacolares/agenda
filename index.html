@@ -1,44 +1,74 @@
-<html ng-app="app">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta http-equiv="content-language" content="pt-br" />
-      <title>Agenda</title>
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-   </head>
-   <body>
-       <div class="container">
-                <nav class="navbar navbar-inverse">
-                    <ul class="nav navbar-nav">
-                        <li ng-class="{active: activetab == '/'}"><a href="/list">Home</a></li>
-                        <li ng-class="{active: activetab == '/add'}"><a href="/add">Cadastro</a></li>
-                        <li ng-class="{active: activetab == '/documentacao'}"><a href="/documentacao">Documentação</a></li>
-                   </ul>
-                </nav>
-        <div ng-view></div>
-      </div>
-      <script src="bower_components/angular/angular.min.js"></script>
-      <script src="bower_components/angular-route/angular-route.min.js"></script>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Agenda</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- AngularJS and ng-Route -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.4/angular-route.min.js"></script>
+
         <!-- Firebase -->
         <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-        
-		<!-- AngularFire -->
+
+        <!-- AngularFire -->
         <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
-      <script src="/agenda/app.js"></script>
-      <script src="/agenda/js/controllers/controllers.js"></script>
-       <script src="/agenda/js/controllers/AddController.js"></script>
-       <script src="/agenda/js/controllers/EditController.js"></script>
-   
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDAZJRwCoC0somKKilhn-VALPc8YJXlDCY",
-    authDomain: "agenda-29385.firebaseapp.com",
-    databaseURL: "https://agenda-29385.firebaseio.com",
-    projectId: "agenda-29385",
-    storageBucket: "",
-    messagingSenderId: "297351562673"
-  };
-  firebase.initializeApp(config);
-</script>
-   </body>
+    </head>
+
+    <body ng-app="app">
+           <div class="container">
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li ng-class="{active: activetab == '#/'}"><a href="#/">Home</a></li>
+        <li ng-class="{active: activetab == '#/add'}"><a href="#/add">Cadastro</a></li>
+        <li ng-class="{active: activetab == '#/doc'}"><a href="#/doc">Documentação</a></li>
+      </ul>
+    </nav>
+    <div ng-view></div> 
+         <!-- Navbar 
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/">Agenda</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Home</a></li>
+                        <li><a href="#/add">Cadastro</a></li>
+                        <li><a href="#/doc">Documentação</a></li>
+                    </ul>
+                </div> -->
+                <!--/.nav-collapse -->
+            <!-- </div>
+        </nav> -->
+
+        <!-- Container -->
+        <!-- <div class="container starter-template">
+            <div ng-view></div>
+        </div> -->
+
+        </div>
+  </div>
+  
+        <!-- <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <!-- Firebase -->
+        <!-- <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script> -->
+        <!-- AngularFire -->
+        <!-- <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script> -->
+        <script src="/agenda/app.js"></script>
+        <script src="/agenda/js/controllers/ListController.js"></script>
+        <script src="/agenda/js/controllers/AddController.js"></script>
+        <script src="/agenda/js/controllers/EditController.js"></script>
+    </body>
 </html>

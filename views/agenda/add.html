@@ -1,53 +1,58 @@
-   <div class="row">
-     <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
-      <div class= "col-xs-12  col-sm-12 col-md-8 col-lg-8">     
-         <div class="panel panel-default">
+<div class="row">
+    <div class="col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
+    <div class="col-xs-12  col-sm-12 col-md-8 col-lg-8">
+        <div class="panel panel-default">
             <div class="panel-heading">Cadastro</div>
-              <div class="panel-body"> 
-                  <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
-               <form ng-app="app" name="formCadastro"  ng-controller="AddController" novalidate ng-submit="addContato()">
+            <div class="panel-body">
+                <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+                <form ng-app="app" name="formCadastro" ng-controller="AddController" novalidate ng-submit="addContato()">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
-                        <input type="nome" class="form-control" id="nome" name= "nome" placeholder="nome"  ng-model="contato.nome" required>
+                        <input type="nome" class="form-control" id="nome" name="nome" placeholder="nome" ng-model="contato.nome" required>
                         <span style="color:red" ng-show="formCadastro.nome.$dirty && formCadastro.nome.$invalid">
-                            <span >Preencha o Nome.</span></span>
-                     </div>
-  
+                        <span >Preencha o Nome.</span></span>
+                    </div>
+
                     <div class="form-group">
                         <label for="sobrenome">Sobrenome:</label>
-                        <input type="sobrenome" class="form-control" id="sobrenome" name= "sobrenome" placeholder="sobrenome" ng-model="contato.sobrenome" required>
+                        <input type="sobrenome" class="form-control" id="sobrenome" name="sobrenome" placeholder="sobrenome" ng-model="contato.sobrenome"
+                            required>
                     </div>
-                      <span style="color:red" ng-show="formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid">
-                            <span >Preencha o Sobrenome.</span>
+
+                    <span style="color:red" ng-show="formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid">
+                        <span >Preencha o Sobrenome.</span>
                     </span>
-                     
-                     <div class="form-group">
+
+                    <div class="form-group">
                         <label for="telefone">Telefone:</label>
-                        <input type="telefone" class="form-control" id="telefone" name= "telefone" placeholder="telefone" ng-model="contato.telefone" required>
+                        <input type="telefone" class="form-control" id="telefone" name="telefone" placeholder="telefone" ng-model="contato.telefone"
+                            required>
                     </div>
-                      <span style="color:red" ng-show="formCadastro.telefone.$dirty && formCadastro.telefone.$invalid">
-                            <span >Preencha o Telefone.</span>
-                        </span>
-                            
+                    <span style="color:red" ng-show="formCadastro.telefone.$dirty && formCadastro.telefone.$invalid">
+                        <span >Preencha o Telefone.</span>
+                    </span>
+
                     <div class="form-group">
                         <label for="apelido">Apelido :</label>
-                        <input type="apelido" class="form-control" id="apelido"name= "apelido"  placeholder="apelido" ng-model="contato.apelido" required>
+                        <input type="apelido" class="form-control" id="apelido" name="apelido" placeholder="apelido" ng-model="contato.apelido" required>
                     </div>
-                      <span style="color:red" ng-show="formCadastro.apelido.$dirty && formCadastro.apelido.$invalid">
-                            <span >Preencha o Apelido.</span>
+
+                    <span style="color:red" ng-show="formCadastro.apelido.$dirty && formCadastro.apelido.$invalid">
+                        <span >Preencha o Apelido.</span>
                     </span>
-    <div class="form-group">
+
+                    <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                         <button type="submit" class="btn btn-primary" ng-disabled="formCadastro.nome.$pristine || formCadastro.nome.$dirty &&formCadastro.nome.$invalid || 
-                         formCadastro.sobrenome.$pristine ||  formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid || 
-                         formCadastro.telefone.$pristine || formCadastro.telefone.$dirty && formCadastro.telefone.$invalid ||
-                         formCadastro.apelido.$pristine || formCadastro.apelido.$dirty && formCadastro.apelido.$invalid" >Adicionar</button>
+                            <button type="submit" class="btn btn-primary" ng-disabled="formCadastro.nome.$pristine || formCadastro.nome.$dirty &&formCadastro.nome.$invalid || 
+                                    formCadastro.sobrenome.$pristine ||  formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid || 
+                                    formCadastro.telefone.$pristine || formCadastro.telefone.$dirty && formCadastro.telefone.$invalid ||
+                                    formCadastro.apelido.$pristine || formCadastro.apelido.$dirty && formCadastro.apelido.$invalid">Adicionar</button>
                             <a href="/list" class="btn btn-small btn-danger ">Cancelar</a>
-                    </div>
+                        </div>
                     </div>
                 </form>
-              </div>
-         </div> 
-      </div>
-        <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
-  </div>  
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
+</div>

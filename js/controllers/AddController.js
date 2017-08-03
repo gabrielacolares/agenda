@@ -1,5 +1,5 @@
-app.controller('AddController', ['$scope', '$firebaseArray', '$location', 'FBURL', function($scope, $firebaseArray, $location, FBURL){
-	
+app.controller('AddController', ['$scope', '$firebaseArray', '$location', 'FBURL', 
+function($scope, $firebaseArray, $location, FBURL){
 	$scope.addContato = function() {
 		var ref = new Firebase(FBURL);
 		var contato = $firebaseArray(ref);

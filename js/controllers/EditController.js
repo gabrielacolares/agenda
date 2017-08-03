@@ -5,7 +5,7 @@ app.controller('EditController', ['$scope','$location', '$routeParams', '$fireba
     $scope.contato = $firebaseObject(ref);
 
     $scope.editContato = function() {
-      contato.$save({
+      $scope.contato.$save({
 			nome: $scope.contato.nome,
 			sobrenome: $scope.contato.sobrenome,
 			telefone: $scope.contato.telefone,
