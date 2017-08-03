@@ -1,5 +1,5 @@
 
-app.controller('DocumentacaoCtrl', function($rootScope, $location){
+app.controller('DocController', function($rootScope, $location){
    $rootScope.activetab = $location.path();
 });
 
