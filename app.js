@@ -17,11 +17,11 @@ app.config(function($routeProvider, $locationProvider)
       templateUrl : 'agenda/views/agenda/add.html',
       controller  : 'AddController',
    })
-
-  //  .when('/listagem', {
-  //     templateUrl : 'agenda/views/agenda/list.html',
-  //     controller  : 'ListagemCtrl',
-  //  })
+   
+    .when('/edit/:id', {
+      templateUrl : 'agenda/views/agenda/edit.html',
+      controller  : 'EditController',
+   })
 
    .when('/documentacao', {
       templateUrl : 'agenda/views/documentacao/documentacao.html',

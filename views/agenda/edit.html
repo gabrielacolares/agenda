@@ -4,11 +4,11 @@
             <div class="panel-heading">Cadastro</div>
               <div class="panel-body"> 
                   <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
-               <form ng-app="app" name="formCadastro"  ng-controller="AddController" novalidate ng-submit="addContato()">
+               <form ng-app="app" name="edit_form"  ng-controller="EditController" novalidate ng-submit="addContato()">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input type="nome" class="form-control" id="nome" name= "nome" placeholder="nome"  ng-model="contato.nome" required>
-                        <span style="color:red" ng-show="formCadastro.nome.$dirty && formCadastro.nome.$invalid">
+                        <span style="color:red" ng-show="edit_form.nome.$dirty && edit_form.nome.$invalid">
                             <span >Preencha o Nome.</span></span>
                      </div>
   
@@ -16,7 +16,7 @@
                         <label for="sobrenome">Sobrenome:</label>
                         <input type="sobrenome" class="form-control" id="sobrenome" name= "sobrenome" placeholder="sobrenome" ng-model="contato.sobrenome" required>
                     </div>
-                      <span style="color:red" ng-show="formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid">
+                      <span style="color:red" ng-show="edit_form.sobrenome.$dirty && edit_form.sobrenome.$invalid">
                             <span >Preencha o Sobrenome.</span>
                     </span>
                      
@@ -24,7 +24,7 @@
                         <label for="telefone">Telefone:</label>
                         <input type="telefone" class="form-control" id="telefone" name= "telefone" placeholder="telefone" ng-model="contato.telefone" required>
                     </div>
-                      <span style="color:red" ng-show="formCadastro.telefone.$dirty && formCadastro.telefone.$invalid">
+                      <span style="color:red" ng-show="edit_form.telefone.$dirty && edit_form.telefone.$invalid">
                             <span >Preencha o Telefone.</span>
                         </span>
                             
@@ -32,14 +32,22 @@
                         <label for="apelido">Apelido :</label>
                         <input type="apelido" class="form-control" id="apelido"name= "apelido"  placeholder="apelido" ng-model="contato.apelido" required>
                     </div>
-                      <span style="color:red" ng-show="formCadastro.apelido.$dirty && formCadastro.apelido.$invalid">
+                      <span style="color:red" ng-show="edit_form.apelido.$dirty && edit_form.apelido.$invalid">
                             <span >Preencha o Apelido.</span>
                     </span>
 
-                    <button type="submit" class="btn btn-primary pull-right" ng-disabled="formCadastro.nome.$pristine || formCadastro.nome.$dirty &&formCadastro.nome.$invalid || 
-                         formCadastro.sobrenome.$pristine ||  formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid || 
-                         formCadastro.telefone.$pristine || formCadastro.telefone.$dirty && formCadastro.telefone.$invalid ||
-                         formCadastro.apelido.$pristine || formCadastro.apelido.$dirty && formCadastro.apelido.$invalid" >Adicionar</button>
+                    <button type="submit" class="btn btn-primary pull-right" ng-disabled="fedit_form.nome.$pristine || edit_formo.nome.$dirty && sedit_form.nome.$invalid || 
+                         edit_form.sobrenome.$pristine ||  edit_form.sobrenome.$dirty && edit_form.sobrenome.$invalid || 
+                         edit_form.telefone.$pristine || edit_form.telefone.$dirty && edit_form.telefone.$invalid ||
+                         edit_form.apelido.$pristine || edit_form.apelido.$dirty && edit_form.apelido.$invalid" >Adicionar</button>
+
+
+  <div class="form-group">
+
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" id="submit" class="btn btn-small btn-primary" ng-click="editProduct()" class="btn btn-small btn-primary"></button> <a href="#/products" class="btn btn-small btn-danger">Cancel</a>
+    </div>
+  </div>
     
                 </form>
               </div>
