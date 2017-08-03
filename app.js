@@ -17,8 +17,8 @@ app.config(function($routeProvider, $locationProvider)
       templateUrl : 'agenda/views/agenda/add.html',
       controller  : 'AddController',
    })
-   
-    .when('/edit/:id', {
+
+    .when('/edit', {
       templateUrl : 'agenda/views/agenda/edit.html',
       controller  : 'EditController',
    })

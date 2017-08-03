@@ -1,5 +1,6 @@
-    <div class="row">
-      <div class= "col-xs-12  col-sm-12 col-md-12 col-lg-12">   
+   <div class="row">
+     <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
+      <div class= "col-xs-12  col-sm-12 col-md-8 col-lg-8">     
          <div class="panel panel-default">
             <div class="panel-heading">Cadastro</div>
               <div class="panel-body"> 
@@ -35,14 +36,18 @@
                       <span style="color:red" ng-show="formCadastro.apelido.$dirty && formCadastro.apelido.$invalid">
                             <span >Preencha o Apelido.</span>
                     </span>
-
-                    <button type="submit" class="btn btn-primary pull-right" ng-disabled="formCadastro.nome.$pristine || formCadastro.nome.$dirty &&formCadastro.nome.$invalid || 
+    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                         <button type="submit" class="btn btn-primary" ng-disabled="formCadastro.nome.$pristine || formCadastro.nome.$dirty &&formCadastro.nome.$invalid || 
                          formCadastro.sobrenome.$pristine ||  formCadastro.sobrenome.$dirty && formCadastro.sobrenome.$invalid || 
                          formCadastro.telefone.$pristine || formCadastro.telefone.$dirty && formCadastro.telefone.$invalid ||
                          formCadastro.apelido.$pristine || formCadastro.apelido.$dirty && formCadastro.apelido.$invalid" >Adicionar</button>
-    
+                            <a href="/list" class="btn btn-small btn-danger ">Cancelar</a>
+                    </div>
+                    </div>
                 </form>
               </div>
          </div> 
       </div>
+        <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
   </div>  

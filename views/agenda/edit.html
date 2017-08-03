@@ -1,7 +1,8 @@
-    <div class="row">
-      <div class= "col-xs-12  col-sm-12 col-md-12 col-lg-12">   
+   <div class="row">
+     <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
+      <div class= "col-xs-12  col-sm-12 col-md-8 col-lg-8">     
          <div class="panel panel-default">
-            <div class="panel-heading">Cadastro</div>
+            <div class="panel-heading">Editar Contato</div>
               <div class="panel-body"> 
                   <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
                <form ng-app="app" name="edit_form"  ng-controller="EditController" novalidate ng-submit="addContato()">
@@ -35,22 +36,14 @@
                       <span style="color:red" ng-show="edit_form.apelido.$dirty && edit_form.apelido.$invalid">
                             <span >Preencha o Apelido.</span>
                     </span>
-
-                    <button type="submit" class="btn btn-primary pull-right" ng-disabled="fedit_form.nome.$pristine || edit_formo.nome.$dirty && sedit_form.nome.$invalid || 
-                         edit_form.sobrenome.$pristine ||  edit_form.sobrenome.$dirty && edit_form.sobrenome.$invalid || 
-                         edit_form.telefone.$pristine || edit_form.telefone.$dirty && edit_form.telefone.$invalid ||
-                         edit_form.apelido.$pristine || edit_form.apelido.$dirty && edit_form.apelido.$invalid" >Adicionar</button>
-
-
-  <div class="form-group">
-
-    <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" id="submit" class="btn btn-small btn-primary" ng-click="editProduct()" class="btn btn-small btn-primary"></button> <a href="#/products" class="btn btn-small btn-danger">Cancel</a>
-    </div>
-  </div>
-    
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                        <input type="submit" id="submit" class="btn btn-small btn-primary" ng-click="editProduct()" class="btn btn-small btn-primary"></button> <a href="/list" class="btn btn-small btn-danger">Cancelar</a>
+                        </div>
+                    </div>
                 </form>
               </div>
          </div> 
       </div>
+        <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
   </div>  
