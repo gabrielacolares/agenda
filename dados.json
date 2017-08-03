@@ -1,0 +1,6 @@
+{"contatos" : [
+   {"id":1,"nome":"Gabriela", "sobrenome" : "Colares","telefone":"98435-5623", "apelido": "gabi", "email": "gabicollares@gmail.com"},
+   {"id":2,"nome":"Monica", "sobrenome" : "Dantas","telefone":"98424-5623", "apelido": "monika", "email": "monikadantas@gmail.com"},
+   {"id":3,"nome":"Haylla", "sobrenome" : "Suelem","telefone":"98195-5623", "apelido": "haylla","email": "haylla@gmail.com"},
+   {"id":4,"nome":"Tais", "sobrenome" : "Otas","telefone":"98195-5470-5623", "apelido": "tais","email": "taisotas@gmail.com"}
+]}

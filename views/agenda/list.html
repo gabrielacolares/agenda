@@ -18,15 +18,15 @@
                             <tbody>
                                  <tr ng-repeat="contato in contatos | filter: filtro"> 
                                     <td>{{ contato.nome }}</td>
-                                    <td>{{ contato.email }}</td>
+                                    <td>{{ contato.sobrenome }}</td>
+                                    <td>{{ contato.telefone }}</td>
                                     <td>{{ contato.apelido }}</td>
-                                    <td>{{ contato.email }}</td>
-                                    <td><a class="btn btn-primary  pull-right" href="">Editar</a>
-                                        <button class="btn btn-danger  pull-right" ng-click="remover(contato)">Excluir</button>
-                                    </td>
+                                     <td><a href="#/edit/{{product.$id}}" class="btn btn-small btn-primary">Editar</a> <a class="btn btn-small btn-danger">Delete</a></td>
                             </tr>
                             <tbody>
                         </table>
+                            <a href="/add" class="btn btn-success" role="button">Novo</a>
+</p>
                     </div>
                 </div>
             </div>

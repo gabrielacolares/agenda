@@ -4,7 +4,7 @@
             <div class="panel-heading">Cadastro</div>
               <div class="panel-body"> 
                   <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
-               <form ng-app="app" name="formCadastro"  ng-controller="CadastroCtrl" novalidate ng-submit="submeter()">
+               <form ng-app="app" name="formCadastro"  ng-controller="AddController" novalidate ng-submit="addContato()">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input type="nome" class="form-control" id="nome" name= "nome" placeholder="nome"  ng-model="contato.nome" required>

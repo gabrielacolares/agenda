@@ -8,28 +8,30 @@ app.config(function($routeProvider, $locationProvider)
 });
 
    $routeProvider
-   .when('/home', {
-      templateUrl : 'agenda/views/agenda/home.html',
-      controller     : 'HomeCtrl',
+   .when('/', {
+    templateUrl : 'agenda/views/agenda/list.html',
+      controller     : 'ListagemCtrl',
    })
 
-   .when('/cadastro', {
+   .when('/add', {
       templateUrl : 'agenda/views/agenda/add.html',
-      controller  : 'CadastroCtrl',
+      controller  : 'AddController',
    })
 
-   .when('/listagem', {
-      templateUrl : 'agenda/views/agenda/list.html',
-      controller  : 'ListagemCtrl',
-   })
+  //  .when('/listagem', {
+  //     templateUrl : 'agenda/views/agenda/list.html',
+  //     controller  : 'ListagemCtrl',
+  //  })
 
    .when('/documentacao', {
       templateUrl : 'agenda/views/documentacao/documentacao.html',
       controller  : 'DocumentacaoCtrl',
    })
-   .otherwise ({ redirectTo: '/home' });
+   .otherwise ({ redirectTo: '/' });
 });
 
+
+
 app.constant("FBURL", 
-  "https://ang-crud.firebaseio.com/products/" //Use the URL of your project here
+  "https://agenda-29385.firebaseio.com/contatos/" //Use the URL of your project here
 );

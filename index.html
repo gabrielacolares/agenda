@@ -9,9 +9,8 @@
        <div class="container">
                 <nav class="navbar navbar-inverse">
                     <ul class="nav navbar-nav">
-                        <!--<li ng-class="{active: activetab == '/'}"><a href="/cadastro">Home</a></li>-->
-                        <li ng-class="{active: activetab == '/listagem'}"><a href="/listagem">Home</a></li>
-                        <li ng-class="{active: activetab == '/cadastro'}"><a href="/cadastro">Cadastro</a></li>
+                        <li ng-class="{active: activetab == '/'}"><a href="/list">Home</a></li>
+                        <li ng-class="{active: activetab == '/add'}"><a href="/add">Cadastro</a></li>
                         <li ng-class="{active: activetab == '/documentacao'}"><a href="/documentacao">Documentação</a></li>
                    </ul>
                 </nav>
@@ -19,11 +18,16 @@
       </div>
       <script src="bower_components/angular/angular.min.js"></script>
       <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+        
+		<!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
       <script src="/agenda/app.js"></script>
       <script src="/agenda/js/controllers/controllers.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-        <!-- AngularFire -->
-      <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+       <script src="/agenda/js/controllers/AddController.js"></script>
+       <script src="/agenda/js/controllers/EditController.js"></script>
+   
 <script>
   // Initialize Firebase
   var config = {
