@@ -1,6 +1,4 @@
-var app = angular.module('app',['ngRoute']);
-
-
+var app = angular.module('app',['ngRoute', 'firebase']);
 
 app.config(function($routeProvider, $locationProvider)
 {
@@ -16,12 +14,12 @@ app.config(function($routeProvider, $locationProvider)
    })
 
    .when('/cadastro', {
-      templateUrl : 'agenda/views/agenda/cadastro.html',
+      templateUrl : 'agenda/views/agenda/add.html',
       controller  : 'CadastroCtrl',
    })
 
    .when('/listagem', {
-      templateUrl : 'agenda/views/agenda/listagem.html',
+      templateUrl : 'agenda/views/agenda/list.html',
       controller  : 'ListagemCtrl',
    })
 
@@ -31,3 +29,7 @@ app.config(function($routeProvider, $locationProvider)
    })
    .otherwise ({ redirectTo: '/home' });
 });
+
+app.constant("FBURL", 
+  "https://ang-crud.firebaseio.com/products/" //Use the URL of your project here
+);

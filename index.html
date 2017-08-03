@@ -9,17 +9,32 @@
        <div class="container">
                 <nav class="navbar navbar-inverse">
                     <ul class="nav navbar-nav">
-                        <li ng-class="{active: activetab == '/'}"><a href="/">Home</a></li>
+                        <!--<li ng-class="{active: activetab == '/'}"><a href="/cadastro">Home</a></li>-->
+                        <li ng-class="{active: activetab == '/listagem'}"><a href="/listagem">Home</a></li>
                         <li ng-class="{active: activetab == '/cadastro'}"><a href="/cadastro">Cadastro</a></li>
-                        <li ng-class="{active: activetab == '/listagem'}"><a href="/listagem">Contatos</a></li>
                         <li ng-class="{active: activetab == '/documentacao'}"><a href="/documentacao">Documentação</a></li>
-                    </ul>
+                   </ul>
                 </nav>
         <div ng-view></div>
       </div>
       <script src="bower_components/angular/angular.min.js"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+      <script src="bower_components/angular-route/angular-route.min.js"></script>
       <script src="/agenda/app.js"></script>
       <script src="/agenda/js/controllers/controllers.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+        <!-- AngularFire -->
+      <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDAZJRwCoC0somKKilhn-VALPc8YJXlDCY",
+    authDomain: "agenda-29385.firebaseapp.com",
+    databaseURL: "https://agenda-29385.firebaseio.com",
+    projectId: "agenda-29385",
+    storageBucket: "",
+    messagingSenderId: "297351562673"
+  };
+  firebase.initializeApp(config);
+</script>
    </body>
 </html>
