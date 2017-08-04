@@ -12,9 +12,7 @@ app.controller('EditController', ['$scope','$location', '$routeParams', '$fireba
 			apelido: $scope.contato.apelido,
 			dataCadastro : new Date()
         }).then(function(data){
-    $scope.mensagem = "Salvo com sucesso!";
-    $scope.edit_form.$setPristine();
-        $scope.contato = {};
-       $location.path('/list');
+     $scope.edit_form.$setPristine();
+      $location.path('/list');
   })}
 }]);

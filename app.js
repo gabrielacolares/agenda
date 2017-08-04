@@ -18,6 +18,11 @@ app.config(function ($routeProvider) {
 			templateUrl: 'views/documentacao/doc.html',
 			controller: 'DocController',
 		})
+	.when('/detail/:id', {
+			controller: 'DetailController',
+			templateUrl: 'views/agenda/detalhe.html'
+
+		})
 		.otherwise({
 			redirectTo: '/'
 		});

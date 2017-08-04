@@ -1,5 +1,5 @@
 
-app.controller('ListController', ['$scope', '$firebaseArray','$firebaseObject', 'FBURL', function($scope,$firebaseArray, $firebaseObject,FBURL){
+app.controller('ListController', ['$scope', '$firebaseArray','$firebaseObject', 'FBURL', '$location',function($scope,$firebaseArray, $firebaseObject,FBURL,$location){
   var contatos = new Firebase(FBURL);
   $scope.contatos = $firebaseArray(contatos);
   $scope.mensagem = '';
@@ -10,5 +10,4 @@ app.controller('ListController', ['$scope', '$firebaseArray','$firebaseObject', 
     contato.$remove().then(function(data){
     $scope.mensagem = "Deletado com sucesso!";
   })}
-      
 }]);

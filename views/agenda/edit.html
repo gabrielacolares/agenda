@@ -1,16 +1,15 @@
    <div class="row">
-     <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
-      <div class= "col-xs-12  col-sm-12 col-md-8 col-lg-8">   
-            <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>  
-         <div class="panel panel-default">
+     <div class= "col-xs-12  col-sm-12 col-md-1 col-lg-1"> </div>
+      <div class= "col-xs-12  col-sm-12 col-md-10 col-lg-10">   
+            <div class="panel panel-default">
             <div class="panel-heading">Editar Contato</div>
-              <div class="panel-body">         
+              <div class="panel-body">      
                <form ng-app="app" name="edit_form"  ng-controller="EditController" novalidate ng-submit="addContato()">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input type="nome" class="form-control" id="nome" name= "nome" placeholder="nome"  ng-model="contato.nome" required>
                         <span style="color:red" ng-show="edit_form.nome.$dirty && edit_form.nome.$invalid">
-                            <span >Preencha o Nome.</span></span>
+                            <span >Informe o Nome.</span></span>
                      </div>
   
                     <div class="form-group">
@@ -18,7 +17,7 @@
                         <input type="sobrenome" class="form-control" id="sobrenome" name= "sobrenome" placeholder="sobrenome" ng-model="contato.sobrenome" required>
                     </div>
                       <span style="color:red" ng-show="edit_form.sobrenome.$dirty && edit_form.sobrenome.$invalid">
-                            <span >Preencha o Sobrenome.</span>
+                            <span >Informe o Sobrenome.</span>
                     </span>
                      
                      <div class="form-group">
@@ -26,7 +25,7 @@
                         <input type="telefone" class="form-control" id="telefone" name= "telefone" placeholder="telefone" ng-model="contato.telefone" required>
                     </div>
                       <span style="color:red" ng-show="edit_form.telefone.$dirty && edit_form.telefone.$invalid">
-                            <span >Preencha o Telefone.</span>
+                            <span >Informe o Telefone.</span>
                         </span>
                             
                     <div class="form-group">
@@ -34,16 +33,14 @@
                         <input type="apelido" class="form-control" id="apelido"name= "apelido"  placeholder="apelido" ng-model="contato.apelido" required>
                     </div>
                       <span style="color:red" ng-show="edit_form.apelido.$dirty && edit_form.apelido.$invalid">
-                            <span >Preencha o Apelido.</span>
+                            <span >Informe o Apelido.</span>
                     </span>
                     <div class="form-group">
-                        <div class="col-sm-offset-9 col-sm-9">
-                        <input type="submit" id="submit" class="btn btn-small btn-primary" ng-click="editContato()" class="btn btn-small btn-primary"></button> <a href="#/list" class="btn btn-small btn-danger">Cancelar</a>
-                        </div>
+                        <input type="submit" id="submit" ng-click="editContato()" class="btn btn-small btn-success"></button> <a href="#/list" class="btn btn-small btn-primary">Cancelar</a>
                     </div>
                 </form>
               </div>
          </div> 
       </div>
-        <div class= "col-xs-12  col-sm-12 col-md-2 col-lg-2"> </div>
+        <div class= "col-xs-12  col-sm-12 col-md-1 col-lg-1"> </div>
   </div>  

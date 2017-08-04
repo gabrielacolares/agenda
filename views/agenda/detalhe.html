@@ -1,0 +1,35 @@
+   <div class="row">
+     <div class= "col-xs-12  col-sm-12 col-md-1 col-lg-1"> </div>
+      <div class= "col-xs-12  col-sm-12 col-md-10 col-lg-10">   
+         <div class="panel panel-default">
+            <div class="panel-heading">Dados Contato</div>
+              <div class="panel-body">         
+               <form ng-app="app" name="edit_form" ng-controller="DetailController" >
+             <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="nome" class="form-control" id="nome" name= "nome" ng-model="contato.sobrenome" ng-disabled="true"  >
+                     </div>
+  
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="sobrenome" class="form-control" id="sobrenome" name= "sobrenome" ng-model="contato.sobrenome" ng-disabled="true"  >
+                    </div>
+                     
+                     <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="telefone" class="form-control" id="telefone" name= "telefone" ng-model="contato.telefone" ng-disabled="true" >
+                    </div>
+                            
+                    <div class="form-group">
+                        <label for="apelido">Apelido :</label>
+                        <input type="apelido" class="form-control" id="apelido"name= "apelido"  ng-model="contato.apelido" ng-disabled="true" >
+                    </div>
+                    <div class="form-group">
+                             <a href="#/list" class="btn  btn-primary">Voltar</a>
+                    </div>
+                </form>
+              </div>
+         </div> 
+      </div>
+        <div class= "col-xs-12  col-sm-12 col-md-1 col-lg-1"> </div>
+  </div>  
