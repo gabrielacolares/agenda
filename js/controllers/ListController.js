@@ -3,7 +3,6 @@ app.controller('ListController', ['$scope', '$firebaseArray','$firebaseObject', 
   var contatos = new Firebase(FBURL);
   $scope.contatos = $firebaseArray(contatos);
   $scope.mensagem = '';
-
   $scope.removeContato = function(id) {
     var ref = new Firebase(FBURL + id);
     var contato = $firebaseObject(ref)

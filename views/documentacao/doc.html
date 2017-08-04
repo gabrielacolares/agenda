@@ -2,19 +2,38 @@
      <div class= "col-xs-12  col-sm-12 col-md-1 col-lg-1"> </div>
       <div class= "col-xs-12  col-sm-12 col-md-10 col-lg-10">       
          <div class="panel panel-default">
-            <div class="panel-heading">Documentação Sistema Agendas</div>
+            <div class="panel-heading">Documentação Sistema Agenda</div>
               <div class="panel-body"> 
+                   <h3>Recomendações</h3>
                   <ol>
                     <li>Instalar Nodejs e npm</li>
                     <li >Bower: npm install -g bower</li>
                     <li>AngularJS:  bower install angularjs#1.4.5 --save</li>
-                    <li>AngularJS route : bower install angular-route#1.4.5 --save</li>
+                    <li>Angular route : bower install angular-route#1.4.5 --save</li>
                     <li>Bootstrap: bower install bootstrap</li>
-                    <li>Jasmine: bower install jasmine</li>
-                    <li>Karma: bower install karma</li>
-                    <li>Grunt: bower install grunt</li>
-                    <li>Execute o comando: grunt init</li>   
+                    <li>Bower: bower install bootstrap</li>
                   </ol> 
+                  <h3>Descrição do Sistema</h3>
+                   <p>Sistema Agenda é uma aplicação destinada á cadastrar  contatos de pessoas. A aplicação tem as seguintes funcionalidades: </p>
+                   <ol>
+                    <li>Cadastrar novo contato de pessoa</li>
+                    <li>Editar dados do contato da pessoa</li>
+                    <li >Deletar pessoa</li>
+                    <li>Filtrar contato digitando apenas o nome da pessoa</li>
+                    <li>Visualizar a lista de contatos de pessoas salvos no sistema</li>
+                  </ol> 
+
+                     <h3>Descrição do Sistema</h3>
+                   <p> Contém a seguinte estrutura:</p>
+                    <ol>
+                    <li>agenda</li>
+                    <li>agenda/js/controllers: Onde estão localizados os controllers</li>
+                    <li>agenda/views/:Onde estão localizadas as telas do sistema</li>
+                    <li>agenda/bower _components:Onde estão localizados ad dependencias instaladas pelo bower: angular,angular-route,angular-fire/bootstrap,firebase</li>
+                  </ol> 
+                   </p>
+                   <p> Para o backend foi utilizado o firebase utilizando firebase e angular-fire</p>
+                   <p> Obs: Não foram configurados testes unitários e mocks de dados</p>
               </div>
          </div> 
       </div>
